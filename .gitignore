@@ -1,0 +1,19 @@
+# logs
+logs
+*.logs
+
+# design files
+*.xd
+*.fig
+design/
+
+# dependencies
+node_modules
+
+# complied directories
+build/
+dist/
+public/
+
+# useless files
+.DS_Store
