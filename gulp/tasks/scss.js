@@ -10,7 +10,7 @@ const sass = gulpSass(dartSass);
 
 export const scss = () =>
   app.gulp
-    // only build sourcemaps if runing the dev environment
+    // only build sourcemaps if running the dev environment
     .src(app.path.src.scss, { sourcemaps: app.isDev })
     .pipe(sass())
     // purge unused CSS during production
