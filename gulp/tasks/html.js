@@ -14,4 +14,5 @@ export const html = () =>
       app.plugins.if(app.isDev, app.plugins.replace("main.min.css", "main.css"))
     )
     .pipe(app.gulp.dest(app.path.build.html))
+    // TODO: Fix perpetual reload when updating HTML files
     .pipe(app.plugins.browserSync.stream());
