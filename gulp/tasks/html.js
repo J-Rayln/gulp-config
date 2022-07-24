@@ -11,6 +11,7 @@ export const html = () =>
     )
     // if we're in development, change the link reference back to main.
     .pipe(
+      // TODO: #3 Refactor with regex so that if the main scss file is named something other than 'main', this still works.
       app.plugins.if(app.isDev, app.plugins.replace("main.min.css", "main.css"))
     )
     .pipe(app.gulp.dest(app.path.build.html))
