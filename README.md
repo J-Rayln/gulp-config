@@ -28,7 +28,7 @@ My Gulp config for most of my web projects. The `src` folder contains basic plac
 > - Image files are compressed and placed in the `dist` folder.
 > - Browser-Sync is NOT launched.
 
-### gulp clean
+### `gulp clean`
 
 > Removes the `dist` folder.
 
