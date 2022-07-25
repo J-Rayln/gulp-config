@@ -14,6 +14,7 @@ My Gulp config for most of my web projects. The `src` folder contains basic plac
 > - Autoprefixes CSS files for browser compatibility.
 > - Concatinates and minifies JavaScript.
 > - Copies images from the src folder.
+> - Copies all html files from `src` to `dist` folders.
 > - Places all output into the `dist` folder according to the [structure below](#this-config-assumes).
 > - Watches all html, image, scss, and JavaScript files for changes then rebuilds all files and refreshes the browser.
 >
@@ -24,8 +25,8 @@ My Gulp config for most of my web projects. The `src` folder contains basic plac
 > This command runs all tasks in `npm start` with the following changes:
 >
 > - Compiled and autoprefixed CSS files are minified and the `.min` suffix is added to the file. Sourcemaps are not created.
-> - HTML files that reference the `main.css` file are updated to reference the new `main.min.css` file.
-> - Image files are compressed and placed in the `dist` folder.
+> - HTML files that reference the `*.min.css` file are updated to reference the new `*.css` file.
+> - Image files are compressed and placed in the `dist/img/` folder.
 > - Browser-Sync is NOT launched.
 
 ### `gulp clean`
@@ -72,5 +73,18 @@ structure below is the core config and sample files
    |- scss/
       |- main.scss
       |- _partial.scss
+   |- index.html            # sample HTML file
 |- gulpfile.js              # Main Gulp file that runs all tasks
 ```
+
+## Changelog
+
+### v. 3.0.1
+
+- Bug fix [#2](https://github.com/J-Rayln/gulp-config/issues/2)
+- Enhancement fix [#3](https://github.com/J-Rayln/gulp-config/issues/3)
+  - Moved HTML files into `src` folder. HTML now compiles into `dist` folder and CSS link references update from `*.min.css` to `*.css`.
+
+### v. 3.0.0
+
+- This is a major version change from my other package that splits tasks into modules instead of one long `gulpfile.js`.

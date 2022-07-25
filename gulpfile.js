@@ -9,7 +9,7 @@ import { clean } from "./gulp/tasks/clean.js";
 import { html } from "./gulp/tasks/html.js";
 import { images } from "./gulp/tasks/images.js";
 import { js } from "./gulp/tasks/js.js";
-import { serve, reload } from "./gulp/tasks/serve.js";
+import { serve } from "./gulp/tasks/serve.js";
 import { scss } from "./gulp/tasks/scss.js";
 
 global.app = {
@@ -22,7 +22,7 @@ global.app = {
 
 // the watch task
 const watchTask = () => {
-  gulp.watch(paths.watch.html, reload);
+  gulp.watch(paths.watch.html, html);
   gulp.watch(paths.watch.scss, scss);
   gulp.watch(paths.watch.js, js);
   gulp.watch(paths.watch.img, images);
