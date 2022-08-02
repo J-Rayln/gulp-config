@@ -1,5 +1,5 @@
-import del from "del";
+import rimraf from 'rimraf';
 
-export const clean = () => {
-  return del(app.path.clean);
+export const clean = (cb) => {
+  return rimraf(app.path.clean, cb);
 };

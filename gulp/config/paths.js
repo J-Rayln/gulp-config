@@ -1,27 +1,29 @@
-import * as nodePath from "path";
-const rootFolder = nodePath.basename(nodePath.resolve());
+// This file contains pathing for the app
 
-// define paths for each funciton
-export const paths = {
+// define base directories.  do not include trailing slash
+const baseSrcDir = 'app/src';
+const baseBuildDir = 'app/dist';
+// leave this blank if you want assets at the top level of your dist directory
+const assetsDir = '/assets';
+
+export const path = {
   src: {
-    scss: "src/scss/**/*.scss",
-    js: "src/js/**/*.js",
-    html: "./*.html",
-    img: "src/img/**/*.{jpg,jpeg,png,gif,webp,ico}",
-    svg: "src/img/**/*.svg",
+    html: `${baseSrcDir}/**/*.html`,
+    scss: `${baseSrcDir}/scss/**/*.scss`,
+    js: `${baseSrcDir}/js/**/*.js`,
+    img: `${baseSrcDir}/img/**/*.{jpg,jpeg,png,gif,wepb,ico}`,
   },
   build: {
-    scss: "dist/css/",
-    js: "dist/js/",
-    html: "dist/",
-    img: "dist/img/",
+    html: `${baseBuildDir}/`,
+    scss: `${baseBuildDir}${assetsDir}/css/`,
+    js: `${baseBuildDir}${assetsDir}/js/`,
+    img: `${baseBuildDir}${assetsDir}/img/`,
   },
   watch: {
-    scss: "src/scss/**/*.scss",
-    js: "src/js/**/*.js",
-    html: "src/**/*.html",
-    img: "src/img/**/*.{jpg,jpeg,png,gif,webp,ico,svg}",
+    html: `${baseSrcDir}/**/*.html`,
+    scss: `${baseSrcDir}/scss/**/*.scss`,
+    js: `${baseSrcDir}/js/**/*.js`,
+    img: `${baseSrcDir}/img/**/*.{jpg,jpeg,png,gif,wepb,ico,svg}`,
   },
-  clean: "./dist",
-  rootFolder: rootFolder,
+  clean: baseBuildDir,
 };

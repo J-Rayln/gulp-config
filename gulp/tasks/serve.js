@@ -6,8 +6,8 @@ export const serve = () =>
     },
     notify: {
       styles: {
-        top: "auto",
-        bottom: "0",
+        top: 'auto',
+        bottom: '0',
       },
     },
   });

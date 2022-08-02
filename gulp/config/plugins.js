@@ -1,11 +1,11 @@
-import browserSync from "browser-sync";
-import gulpif from "gulp-if";
-import replace from "gulp-replace";
-import newer from "gulp-newer";
+import gulpif from 'gulp-if';
+import browserSync from 'browser-sync';
+import rename from 'gulp-rename';
+import replace from 'gulp-replace';
 
 export const plugins = {
-  browserSync: browserSync,
   if: gulpif,
-  newer: newer,
+  browserSync: browserSync,
+  rename: rename,
   replace: replace,
 };
