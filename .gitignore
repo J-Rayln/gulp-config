@@ -7,6 +7,9 @@ logs
 *.fig
 design/
 
+# misc files
+.prettierignore
+
 # dependencies
 node_modules
 

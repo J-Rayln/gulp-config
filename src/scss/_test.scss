@@ -1,0 +1,24 @@
+@use "abstracts/colors" as c;
+
+/* these selectors should have some webkit declarations added during autoprefix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* this selector should remain unchanged */
+body {
+  background-color: lightgray;
+  // color: c.$test;
+}
+
+/* this comment and the selector below is a test to make sure
+  that the css-purge does its job and removes it during the build proess
+  
+  NOTE:  You should see it get complied while running the dev environment
+  (AKA npm start)
+*/
+.to-be-removed {
+  content: "";
+}
