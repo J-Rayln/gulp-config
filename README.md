@@ -57,7 +57,7 @@ app/
 |     |- img/               # Optimized images (file structure retained)
 |     |- js/                # Concatinated & minified JS files
 |        |- scripts.min.js
-|  |- index.html            #
+|  |- index.html
 |
 |- src/
 |  |- img/
@@ -91,11 +91,12 @@ gulpfile.js                 # Main Gulp file
 ### 3.1.0
 
 - Refactor to separate the app files from everything else. All `src` and `dist` files are now contained within the `./app` direcotory.
-- Discontinued use of `'del` module. Replaced with `rimraf`.
-- Added `gulp-newer` functionality for image processing. If optimization is set to process during dev, only newly added images will be optimized whehn task runs during watch.
+- Discontinued use of `del` module. Replaced with `rimraf`.
+- Added `gulp-newer` functionality for image processing. If optimization is set to process during dev, only newly added images will be optimized when task runs during watch.
 - Changed `gulp-postcss` and `cssnano` for `gulp-clean-css`.
 - Changed `gulp-uglify` for `gulp-terser`.
 - Added sourcemaps for JavaScript during dev (`npm start` or `npm run dev`) only.
+- Added `npm run dev` command to allow dev without running BrowserSync
 
 ### 3.0.1
 
