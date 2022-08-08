@@ -1,0 +1,37 @@
+@use '../abstracts/' as a;
+// -----------------------------------------------------------------------------
+// This file contains very basic starting point styles
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+* Make all elements from the DOM inherit from the parent box-sizing
+* Since `*` has a specificity of 0, it does not override the `html` value
+* making all elements inheriting from the root box-sizing value
+* See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--clr-neutral-100, #ffffff);
+
+  @include a.respond-above(lg) {
+    font-size: 1rem;
+  }
+}
+
+.container {
+  max-width: a.to-rem(900px);
+  max-width: a.$container-max-width;
+  font-size: a.fluid-font(1.2rem, 3rem);
+}

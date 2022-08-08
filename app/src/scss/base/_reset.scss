@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic starting point styles
+//
+// This is a modified version of Andy Bell's Modern CSS Reset
+// https://piccalil.li/blog/a-modern-css-reset/
+// -----------------------------------------------------------------------------
+
+/* box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default margin & padding from everything.
+  1. Also, set font to inherit for EVERYTHING  This forces the use of the proper
+  CLASS for styiing text rather than using the wrong semantic HTML tag.  See
+  his blog post https://www.mikeaparicio.com/posts/2021-03-25-cool-css/
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* 1 */
+}
+
+/* remove lyst styles for elements with the list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* a elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons
+  This isn't needed since we set it above in the 2nd declaration,
+  ubut I leave it in because if I ever change the above declaration, I
+  won't forget to put it back and it does no harm to leave it in.
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
