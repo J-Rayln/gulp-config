@@ -1,6 +1,6 @@
-# Gulp Config
+# Gulp, Sass, and BrowserSync Config
 
-My Gulp config for most of my web projects. The `src` folder contains basic placeholder files that can be used to make sure the Gulp config is installed and working as expected.
+My initial config for most of my web projects. The `src` folder contains basic placeholder files that can be used to make sure the Gulp config is installed and working as expected.
 
 ## To Get Started
 
