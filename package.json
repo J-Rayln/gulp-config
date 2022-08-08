@@ -1,5 +1,5 @@
 {
-  "name": "gulp-config",
+  "name": "gulp-sass-browsersync-config",
   "version": "3.1.0",
   "description": "",
   "main": "gulpfile.js",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/J-Rayln/gulp-config.git"
+    "url": "https://github.com/J-Rayln/gulp-sass-browsersync-config.git"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",
